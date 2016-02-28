@@ -1,0 +1,119 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%         Análise dos Resultados        %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      Otimização de funções      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Otimização de funções}
+% Nessa fase de aprendizado, foram feitas algumas observações quanto às primeiras
+% codificações, que podem causar interpretações incorretas em resultados iniciais.
+
+% Durante as primeiras execuções do algorítmo no problema de otimizaçãoda função 
+% de segundo grau -
+% \begin{equation} fitness(x) = 100 - x^2 \end{equation}
+% - foi notável a rapidez que o resultado foi encontrado com um número pequeno de 
+% gerações (menos de 20). Porém, nesse caso o problema é muito simples, os dados 
+% são bem comportados, só existe uma característica sendo analisada (valor 
+% decimal do cromossomo) e  a codificação binária foi utilizada (contém menos 
+% informação que a codificação real). A rápida homogeneidade da população indica 
+% falta de variedade entre os
+% indivíduos. 
+
+Para a verificação do modelo, os dados foram divididos em treino e teste (70\% para treino e 30\% para teste). O  algorítmo foi parametrizado com 75\% de chance de {\it crossover} e 10\% de chance de mutação, para 100, 200 e 500 gerações de 100 indivíduos e 100 gerações de 250 
+indivíduos. 
+
+Para aumentar a diversidade, à cada geração, a chance de {\it crossover} decresce em 
+0.1\% - até atingir 60\% - e a chance de mutação aumenta na mesma medida - até atingir 
+30\%. 
+
+Nesse experimento, foram feitas três execuções consecutivas de cada algorítmo e, na última geração, foi selecionado o conjunto de centróides que possuía o menor {\it fitness}.
+
+Nas três execuções do {\it K-means} clássico, as coordenadas tiveram os resultados mais discrepantes. Como dito anteriormente, sendo necessário avaliar os arranjos possíveis de centróides para se ter o valor médio. Já nas execuções do algorítmo híbrido\footnote[1]{\url{https://github.com/IcaroMarcelino/Testes_SciKitLearn}} as discrepâncias diminuem com o aumento do número de gerações. 
+
+Enquanto houver tempo, o número de gerações pode ser aumentado para resultados mais precisos e menos discrepantes - entre duas execuções diferentes. Quando o número de gerações tende à infinito, a resposta tende ao seu melhor resultado \cite{ga_based_clustering_technique}. Nesse contexto, a métrica de tempo deve ser o comparativo do que seria necessário para realizar o procedimento com {\it K-means} com o que é viável para decidir o melhor número de gerações. O aumento do número de indivíduos introduz mais diversidade de genes, porém, aumenta o tempo de execução.
+
+As tabelas a seguir mostram os resultados obtidos com o algorítmo clássico e híbrido em três execuções independentes e consecutivas.
+
+\tabela{Execução do algorítmo K-means sobre o banco de dados Iris}
+	{k-means}{| c | c | c | c |}{
+	\hline
+
+	\textbf{Execução} & \textbf{Centróide 1} & \textbf{Centróide 2} & \textbf{Centróide 3}
+	\\ \hline
+
+	1 & (7.70, 2.80, 6.50, 2.30) & (6.45, 3.25, 5.05, 1.90) & (6.00, 2.90, 4.90, 1.50) \\
+	\hline
+
+	2 & (6.30, 3.30, 5.35, 2.30) & (6.15, 3.05, 5.30, 1.80) & (5.05, 3.00, 2.15, 0.70) \\
+	\hline
+
+	3 & (6.95, 3.00, 6.15, 2.30) & (5.70, 2.70, 4.45, 1.45) & (5.35, 3.85, 1.45, 0.30) \\ 
+	\hline
+}
+
+\tabela{Execução do algorítmo K-means Híbrido sobre o banco de dados Iris - 100 gerações, 100 indivíduos}
+	{k-means}{| c | c | c | c |}{
+	\hline
+
+	\textbf{Execução} & \textbf{Centróide 1} & \textbf{Centróide 2} & \textbf{Centróide 3}
+	\\ \hline
+
+	1 & (6.79, 3.04, 5.52, 2.14) & (5.76, 2.68, 4.43, 1.31) & (5.14, 3.58, 1.60, 0.28)
+	\\
+	\hline
+
+	2 & (6.59, 3.10, 5.38, 1.98) & (5.77, 2.69, 4.32, 1.48) & (5.26, 3.40, 1.44, 0.35)
+	\\
+	\hline
+
+	3 & (6.64, 2.92, 5.11, 1.65) & (5.76, 2.60, 3.64, 1.23) & (4.88, 3.52, 1.39, 0.28)
+	\\
+	\hline
+}
+
+\tabela{Execução do algorítmo K-means Híbrido sobre o banco de dados Iris - 200 gerações, 100 indivíduos}
+	{k-means}{| c | c | c | c |}{
+	\hline
+
+	\textbf{Execução} & \textbf{Centróide 1} & \textbf{Centróide 2} & \textbf{Centróide 3}
+	\\ \hline
+
+	1 & (6.57, 3.08, 5.54, 1.96) & (5.63, 2.67, 4.09, 1.43) & (4.97, 3.38, 1.44, 0.16)
+	\\ \hline
+	2 & (6.55, 3.01, 5.20, 1.75) & (5.85, 2.58, 3.97, 0.71) & (4.98, 3.50, 1.37, 0.16)
+	\\ \hline
+	3 & (6.48, 2.99, 5.17, 1.89) & (5.62, 2.57, 4.12, 1.18) & (4.94, 3.34, 1.36, 0.27)
+	\\ \hline
+}
+
+\tabela{Execução do algorítmo K-means Híbrido sobre o banco de dados Iris - 500 gerações, 100 indivíduos}
+	{k-means}{| c | c | c | c |}{
+	\hline
+
+	\textbf{Execução} & \textbf{Centróide 1} & \textbf{Centróide 2} & \textbf{Centróide 3}
+	\\ \hline
+
+	1 & (6.75, 3.16, 5.65, 2.07) & (5.98, 2.79, 4.35, 1.58) & (4.93, 3.34, 1.49, 0.23)
+	\\ \hline
+	2 & (6.76, 3.07, 5.58, 2.06) & (5.85, 2.74, 4.25, 1.29) & (5.03, 3.33, 1.40, 0.18)
+	\\ \hline
+	3 & (6.67, 3.07, 5.58, 2.07) & (5.73, 2.92, 4.28, 1.34) & (5.07, 3.34, 1.54, 0.24)
+	\\ \hline
+}
+
+\tabela{Execução do algorítmo K-means Híbrido sobre o banco de dados Iris - 100 gerações, 250 indivíduos}
+	{k-means}{| c | c | c | c |}{
+	\hline
+
+	\textbf{Execução} & \textbf{Centróide 1} & \textbf{Centróide 2} & \textbf{Centróide 3}
+	\\ \hline
+
+	1 & (6.74, 3.14, 5.64, 1.92) & (5.73, 2.68, 4.13, 1.30) & (4.98, 3.31, 1.48, 0.18)
+	\\ \hline
+
+	2 & (6.76, 3.07, 5.58, 2.06) & (5.85, 2.74, 4.25, 1.29) & (5.03, 3.33, 1.40, 0.18)
+	\\ \hline
+
+	3 & (6.77, 3.11, 5.48, 1.87) & (5.73, 2.82, 4.23, 1.29) & (4.82, 3.60, 1.60, 0.29)
+	\\ \hline
+}

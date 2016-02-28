@@ -1,0 +1,39 @@
+\BOOKMARK [0][-]{dedication.0}{Dedicat\363ria}{}% 1
+\BOOKMARK [0][-]{acknowledgements.0}{Agradecimentos}{}% 2
+\BOOKMARK [0][-]{resumo.0}{Resumo}{}% 3
+\BOOKMARK [0][-]{abstract.0}{Abstract}{}% 4
+\BOOKMARK [0][-]{chapter.1}{Introdu\347\343o}{}% 5
+\BOOKMARK [1][-]{section.1.1}{Defini\347\343o do Problema}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.2}{Sobre os dados que ser\343o utilizados}{chapter.1}% 7
+\BOOKMARK [1][-]{section.1.3}{Objetivos}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{Fundamentos Te\363ricos}{}% 9
+\BOOKMARK [1][-]{section.2.1}{Algor\355tmos Gen\351ticos}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.1.1}{Analogias com a Gen\351tica e Sele\347\343o Natural}{section.2.1}% 11
+\BOOKMARK [1][-]{section.2.2}{Codifica\347\343o}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Operadores gen\351ticos}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.3.1}{Sele\347\343o}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.2}{Crossover}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.3}{Muta\347\343o}{section.2.3}% 16
+\BOOKMARK [1][-]{section.2.4}{A fun\347\343o Fitness}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.5}{Evolu\347\343o}{chapter.2}% 18
+\BOOKMARK [1][-]{section.2.6}{Minera\347\343o de Dados}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.6.1}{CRISP-DM}{section.2.6}% 20
+\BOOKMARK [1][-]{section.2.7}{Clusteriza\347\343o}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.7.1}{K-means}{section.2.7}% 22
+\BOOKMARK [1][-]{section.2.8}{Rigor quanto aos alogr\355tmos}{chapter.2}% 23
+\BOOKMARK [2][-]{subsection.2.8.1}{Linear Feedback Shift Register}{section.2.8}% 24
+\BOOKMARK [2][-]{subsection.2.8.2}{Cross-Validadtion}{section.2.8}% 25
+\BOOKMARK [0][-]{chapter.3}{Ferramentas Utilizadas}{}% 26
+\BOOKMARK [1][-]{section.3.1}{Linguagem Python}{chapter.3}% 27
+\BOOKMARK [2][-]{subsection.3.1.1}{Distributed Evolutionary Algorithms in Python \(DEAP\)}{section.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.1.2}{scikit-learn}{section.3.1}% 29
+\BOOKMARK [0][-]{chapter.4}{Dados Utilizados}{}% 30
+\BOOKMARK [1][-]{section.4.1}{Iris}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.2}{Dados sobre microorganismos}{chapter.4}% 32
+\BOOKMARK [0][-]{chapter.5}{Metodologia Cient\355fica}{}% 33
+\BOOKMARK [0][-]{chapter.6}{Hibridiza\347\343o}{}% 34
+\BOOKMARK [0][-]{chapter.7}{An\341lise dos Resultados}{}% 35
+\BOOKMARK [0][-]{chapter.8}{Clusteriza\347\343o de Dados Biom\351dicos com T\351cnicas de Algoritmos Gen\351ticos}{}% 36
+\BOOKMARK [1][-]{section.8.1}{Trabalhos Futuros}{chapter.8}% 37
+\BOOKMARK [1][-]{section.8.2}{Cronograma para o pr\363ximo semestre}{chapter.8}% 38
+\BOOKMARK [0][-]{section*.7}{Refer\352ncias}{}% 39

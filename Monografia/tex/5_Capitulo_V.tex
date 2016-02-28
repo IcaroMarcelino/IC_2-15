@@ -1,0 +1,22 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%             Hibridização              %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Na elaboração das primeiras estratégias para a solução do problema levantado para esse 
+projeto, foi proposta a hibridização do algorítmo {\it K-means} com algorítmos genéticos. Uma vez que os GAs conseguem otimizar uma solução inicial válida que não é necessariamente boa. E com o avançar das gerações o resultado tende ao seu ótimo \cite{ga_based_clustering_technique}.
+
+O cromossomo (possível solução do problema) é um conjunto de {\it k} centróides reais de dimensão {\it n}. Para sua representação, foi escolhida uma representação por {\it string} real de tamanho {\it nk}, onde as primeiras {\it n} posições correspondem às coordenadas no primeiro centróide, as {\it n} seguintes ao segundo e assim sucessivamente.
+
+Os indivíduos são inicializados de maneira aleatória. Cada gene do cromossomo é um real pseudo-aleatório entre o valor menor valor encontrado na base de dados e o maior deles acrescido da média entre os dois.
+
+O {\it crossover} fragmenta os genitores em três partes cada, gerando dois filhos formados pela combinação dessas partes, de modo que suas posições são mantidas dentro dos cromossomos gerados. Nessa proposta, não ocorre mutação durante essa fase. O cruzamento ocorre entre dois indivíduos vizinhos, começando pelo primeiro da população.
+Porém esse processo só ocorre dentro de uma determinada probabilidade pré-definida. Um mesmo indivíduo não participa dessa operação duas vezes numa mesma geração.
+
+Com a prole formada, todos os indivíduos têm chance de sofrer mutação. Os selecionados sofrem pequenas perturbações (dentro de uma distribuição gaussiana) em seus genes, com o objetivo de aumentar a diversidade populacional. Esta substitui completamente a geração anterior.
+
+O {\it fitness} dos indivíduos é dado pela soma das distâncias euclidianas dos pontos para seus respectivos {\it clusters}. Logo, um bom conjunto de centróides minimiza esse valor, ou seja, um melhor cromossomo é aquele que possui o menor fitness.
+
+Para a formação da nova geração, são mantidos os dois melhores cromossomos da geração anterior. Essa abordagem elitista garante que o melhor indivíduo da próxima geração será não pior que na anterior.
+
+A cada geração, os indivíduos são avaliados, sofrem {\it crossover} e mutação. Isso ocorre até que o número de gerações desejado seja atingido, ou até que um determinado grau de homogeneidade seja atingido - o ponto onde a população perde sua diversidade.
+
+Antes da execução devem ser definidos o número total de gerações, a probabilidade de um indivíduo sofrer mutação, probabilidade de sucesso de uma operação de {\it crossover} e o tamanho da população.

@@ -1,0 +1,7 @@
+Pontos Importantes
+A Survey of Evolutionary Algorithms for Clustering (survey_of_evol_algorithms)
+
+Algorítmos evolutivos geram soluções promissoras para clusterização de maneira mais eficiente do que seleções aleatórias. 
+Já que estes não fazem uso da informação de qualidade de partições anteriores, logo, são menos eficientes. Necessitando 
+de várias execuções para um bom resultado.
+

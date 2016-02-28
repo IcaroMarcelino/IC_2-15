@@ -1,0 +1,94 @@
+\begin{thebibliography}{10}
+
+\bibitem{data_clustering}
+Charu~C Aggarwal e Chandan~K Reddy.
+\newblock {\em Data clustering: algorithms and applications}.
+\newblock CRC Press, 2013.
+
+\bibitem{crisp}
+Pete Chapman, Julian Clinton, Randy Kerber, Thomas Khabaza, Thomas Reinartz,
+  Colin Shearer, e Rudiger Wirth.
+\newblock Crisp-dm 1.0 step-by-step data mining guide.
+\newblock Technical report, The CRISP-DM consortium, 2000.
+
+\bibitem{davis}
+Lawrence Davis.
+\newblock {\em Handbook of Genetic Algorithms}.
+\newblock Van Nostrand Reeinhold, 115 Fifth Avenue, New York 10003, 1st
+  edition, 1991.
+
+\bibitem{escolha_mineracao}
+Maria~Madalena Dias.
+\newblock Par{\^a}metros na escolha de t{\'e}cnicas e ferramentas de
+  minera{\c{c}}{\~a}o de dados.
+\newblock {\em Acta Scientiarum. Technology}, 24:1715--1725, 2008.
+
+\bibitem{survey_of_evol_algorithms}
+Alex A.~Freitas Eduardo R.~Hruschka, Ricardo J. G. B.~Campello e André C. P.
+  L.~F. de~Carvalho.
+\newblock A survey of evolutionary algorithms for clustering.
+\newblock {\em IEEE Transactions on Systems, Man, and Cybernetics, Part C:
+  Applications and Reviews}, Vol. 39, Issue 2:133--155, 2009.
+
+\bibitem{deap}
+F\'elix-Antoine Fortin, Fran\c{c}ois-Michel {De Rainville}, Marc-Andr\'e
+  Gardner, Marc Parizeau, e Christian Gagn\'e.
+\newblock {DEAP}: Evolutionary algorithms made easy.
+\newblock {\em Journal of Machine Learning Research}, 13:2171--2175, jul 2012.
+
+\bibitem{goldberg}
+David~E. Goldberg.
+\newblock {\em Genetic Algorithms in Search, Optimization and Machine
+  Learning}.
+\newblock Addison-Wesley Longman Publishing Co., Inc., Boston, MA, USA, 1st
+  edition, 1989.
+
+\bibitem{antibioticos}
+Denise~Oliveira Guimar{\~a}es, Luciano da~Silva Momesso, M{\^o}nica~Tallarico
+  Pupo, et~al.
+\newblock Antibi{\'o}ticos: import{\^a}ncia terap{\^e}utica e perspectivas para
+  a descoberta e desenvolvimento de novos agentes.
+\newblock {\em Quim. Nova}, 33(3):667--679, 2010.
+
+\bibitem{cross_val}
+Ron Kohavi et~al.
+\newblock A study of cross-validation and bootstrap for accuracy estimation and
+  model selection.
+\newblock In {\em Ijcai}, volume~14, pages 1137--1145, 1995.
+
+\bibitem{uci}
+M.~Lichman.
+\newblock {UCI} machine learning repository, 2013.
+
+\bibitem{estudos_crisp}
+Emerson~Lopes Machado e Marcelo Ladeira.
+\newblock Um estudo de limpeza em base de dados desbalanceada e com
+  sobreposi{\c{c}}{\~a}o de classes.
+\newblock In {\em XXVII Congresso da Sociedade Brasileira de
+  Computa{\c{c}}{\~a}o}, pages 330--340, 2007.
+
+\bibitem{ga_based_clustering_technique}
+Ujjwal Maulik e Sanghamitra Bandyopadhyay.
+\newblock Genetic algorithm-based clustering technique.
+\newblock {\em Pattern Recognition}, Vol. 33, Issue 9:1455–1465, September
+  2000.
+
+\bibitem{scikit_learn}
+G.; Gramfort A.; Michel V.; Thirion B.; Grisel O.; Blondel M.; Prettenhofer P.;
+  Weiss R.; Dubourg V.; Vanderplas J.; Passos A.; Cournapeau D.; Brucher M.;
+  Perrot~M. Pedregosa, F.;~Varoquaux e E.~Duchesnay.
+\newblock Scikit-learn: Machine learning in {P}ython.
+\newblock {\em Journal of Machine Learning Research}, 12:2825--2830, 2011.
+
+\bibitem{antibioticos1}
+Eliane RibeiroIII.
+\newblock Eventos adversos a antibi{\'o}ticos em pacientes internados em um
+  hospital universit{\'a}rio.
+\newblock {\em Rev Sa{\'u}de P{\'u}blica}, 41(6):1042--8, 2007.
+
+\bibitem{learning_from_data}
+Malik Magdon-Ismail Yaser S. Abu-Mostafa e Hsuan-Tien Lin.
+\newblock {\em Learning From Data - A Short Course}.
+\newblock AMLBook, 2012.
+
+\end{thebibliography}

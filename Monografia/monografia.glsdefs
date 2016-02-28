@@ -1,0 +1,240 @@
+\ifglsentryexists{UnB}{}%
+{%
+\gls@defglossaryentry{UnB}%
+{%
+name={UnB},%
+sort={UnB},%
+type={acronym},%
+first={Universidade de Bras\IeC {\'\i }lia (UnB)},%
+firstplural={Universidade de Bras\IeC {\'\i }lias(UnBs)},%
+text={UnB},%
+plural={UnBs},%
+description={Universidade de Brasília},%
+descriptionplural={Universidade de Brasília\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Universidade de Bras\IeC {\'\i }lia},%
+longplural={Universidade de Bras\IeC {\'\i }lias},%
+short={UnB},%
+shortplural={UnBs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{BCE}{}%
+{%
+\gls@defglossaryentry{BCE}%
+{%
+name={BCE},%
+sort={BCE},%
+type={acronym},%
+first={Biblioteca Central (BCE)},%
+firstplural={Biblioteca Centrals(BCEs)},%
+text={BCE},%
+plural={BCEs},%
+description={Biblioteca Central},%
+descriptionplural={Biblioteca Central\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Biblioteca Central},%
+longplural={Biblioteca Centrals},%
+short={BCE},%
+shortplural={BCEs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{CIC}{}%
+{%
+\gls@defglossaryentry{CIC}%
+{%
+name={CIC},%
+sort={CIC},%
+type={acronym},%
+first={Departamento de Ci\IeC {\^e}ncia da Computa\IeC {\c c}\IeC {\~a}o (CIC)},%
+firstplural={Departamento de Ci\IeC {\^e}ncia da Computa\IeC {\c c}\IeC {\~a}os(CICs)},%
+text={CIC},%
+plural={CICs},%
+description={Departamento de Ciência da Computação},%
+descriptionplural={Departamento de Ciência da Computação\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Departamento de Ci\IeC {\^e}ncia da Computa\IeC {\c c}\IeC {\~a}o},%
+longplural={Departamento de Ci\IeC {\^e}ncia da Computa\IeC {\c c}\IeC {\~a}os},%
+short={CIC},%
+shortplural={CICs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{GA}{}%
+{%
+\gls@defglossaryentry{GA}%
+{%
+name={GA},%
+sort={GA},%
+type={acronym},%
+first={Genetic Algorithm\glsspace (GA)},%
+firstplural={Genetic Algorithms\glsspace (GAs)},%
+text={GA},%
+plural={GAs},%
+description={Genetic Algorithm},%
+descriptionplural={Genetic Algorithm\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Genetic Algorithm},%
+longplural={Genetic Algorithms},%
+short={GA},%
+shortplural={GAs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{CRISP-DM}{}%
+{%
+\gls@defglossaryentry{CRISP-DM}%
+{%
+name={CRISP-DM},%
+sort={CRISP-DM},%
+type={acronym},%
+first={Cross Industry Standard Process for Data Mining\glsspace (CRISP-DM)},%
+firstplural={Cross Industry Standard Process for Data Minings\glsspace (CRISP-DMs)},%
+text={CRISP-DM},%
+plural={CRISP-DMs},%
+description={Cross Industry Standard Process for Data Mining},%
+descriptionplural={Cross Industry Standard Process for Data Mining\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Cross Industry Standard Process for Data Mining},%
+longplural={Cross Industry Standard Process for Data Minings},%
+short={CRISP-DM},%
+shortplural={CRISP-DMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{LFSR}{}%
+{%
+\gls@defglossaryentry{LFSR}%
+{%
+name={LFSR},%
+sort={LFSR},%
+type={acronym},%
+first={Linear Feedback Shift Register\glsspace (LFSR)},%
+firstplural={Linear Feedback Shift Registers\glsspace (LFSRs)},%
+text={LFSR},%
+plural={LFSRs},%
+description={Linear Feedback Shift Register},%
+descriptionplural={Linear Feedback Shift Register\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Linear Feedback Shift Register},%
+longplural={Linear Feedback Shift Registers},%
+short={LFSR},%
+shortplural={LFSRs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{DM}{}%
+{%
+\gls@defglossaryentry{DM}%
+{%
+name={DM},%
+sort={DM},%
+type={acronym},%
+first={Data Mining\glsspace (DM)},%
+firstplural={Data Minings\glsspace (DMs)},%
+text={DM},%
+plural={DMs},%
+description={Data Mining},%
+descriptionplural={Data Mining\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Data Mining},%
+longplural={Data Minings},%
+short={DM},%
+shortplural={DMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{DEAP}{}%
+{%
+\gls@defglossaryentry{DEAP}%
+{%
+name={DEAP},%
+sort={DEAP},%
+type={acronym},%
+first={Distributed Evolutionary Algorithms in Python\glsspace (DEAP)},%
+firstplural={Distributed Evolutionary Algorithms in Pythons\glsspace (DEAPs)},%
+text={DEAP},%
+plural={DEAPs},%
+description={Distributed Evolutionary Algorithms in Python},%
+descriptionplural={Distributed Evolutionary Algorithms in Python\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Distributed Evolutionary Algorithms in Python},%
+longplural={Distributed Evolutionary Algorithms in Pythons},%
+short={DEAP},%
+shortplural={DEAPs},%
+counter={page},%
+parent={},%
+%
+}%
+}%

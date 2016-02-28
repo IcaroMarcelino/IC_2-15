@@ -1,0 +1,51 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%              Aprendizado              %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Nesse capítulo são apresentadas as ferramentas que serão utilizadas para o
+desenvolvimento do projeto e a descrição dos primeiros algorítmos implementados.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Linguagem Python}
+Os algorítmos foram implementados na linguagem {\it Python} 3.4.3. Foi escolhida
+pelo suporte disponível pelo {\it framework} DEAP para manipulação de algorítmos
+genéticos, aumentando a rapidez no desenvolvimento do projeto, já que contém os 
+operadores básicos dos GAs. É uma linguagem interpretada, multi-paradigma com 
+alta legibilidade, sendo muito utilizada para o ensino.  
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Distributed Evolutionary Algorithms in Python (DEAP)}
+O {\it framework} Distributed Evolutionary Algorithms in {\it Python} (DEAP) 
+proporciona uma prototipação rápida de GAs, com estruturas de dados transparentes
+e algorítmos explícitos \cite{deap}.
+
+Seus módulos disponibilizam um grande aparato de ferramentas para a construção de
+um algorítmo genético. Fazendo com que o programador se preocupe mais com a 
+modelagem do problema.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{scikit-learn}
+Scikit-learn é uma biblioteca de código aberto para programação em linguagem 
+{\it Python} \cite{scikit_learn}. Faz uso de outras bibliotecas matemáticas e 
+científicas (por exemplo {\it NumPy} e {\it SciPy}). Dá suporte para clusterização,
+classificação e regressão, o que a torna interessante para aplicação nesse projeto.
+
+%% Otimização de funções     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \section{Otimização de funções}
+% O primeiro contato com os GAs foi feito com o problema de otimizar uma função em
+% um dado intervalo, ou seja, encontrar o ponto de máximo utilizando o 
+% {\it framework DEAP}. Para isso, o cromossomo foi representado como um valor 
+% inteiro pra o eixo {\it x}, inicialmente, gerado de maneira psuedo-aleatória. 
+% Esse valor inteiro foi convertido para sua forma binária. Para o cruzamento foi 
+% escolhido o {\it one point crossover}.
+
+% A função {\it fitness} foi definida como 
+% \begin{equation} fitness(x) = 100 - x^2 \end{equation},
+% ou seja, o melhor indivíduo será o cromossomo {\it x} que maximizar a função. De
+% maneira análoga se resolve o problema de minimizar uma função. 
+
+% Ao executar o algorítmo com chance de {\it crossover} de 75\%, chance de mutação
+% de 5\% e 20 gerações o resultado convergiu rapidamente para o esperado 
+% \begin{equation} x = 0 \end{equation}.

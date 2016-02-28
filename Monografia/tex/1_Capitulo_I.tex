@@ -1,0 +1,212 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%         Fundamentação Teórica         %%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Aqui são apresentados os conceitos fundadmentais aprendidos que tornaram
+possivel a realização da parte inicial do projeto.
+
+%     Algorítmos Genéticos     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Algorítmos Genéticos}
+
+Algorítmos Genéticos (GAs) são algorítmos de busca e otimização, que procuram
+obter a melhor solução para um determinado problema. Foram inventados para 
+imitar processos observados na evolução natural \cite{davis} e seus mecanismos
+\cite{goldberg}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%       Analogias com a Genética e Seleção Natural      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Analogias com a Genética e Seleção Natural}
+Um GA faz uso dos mecanismos que ocorrem na evolução para atingir seus objetivos.
+De maneira que o objeto de análise é uma população de indivíduos, onde cada um 
+possui suas próprias características. Essas características são representadas 
+por um cromossomo, que é um grupamento de genes. Com o passar do tempo, a 
+população evolui através da reprodução para a geracão de novos indivíduos e 
+possíveis mutações nos mesmos. 
+
+No contexto computacional, o indivíduo representa uma possível solução para um
+determinado problema. Portanto, a população é um conjunto de soluções. Através
+da sua evolução, os indivíduos considerados menos aptos tendem a desaparecer e
+os mais aptos sobrevivam e continuem gerando outros tão bons ou melhores.
+
+Naturalmente, outros mecanismos também são implementados. Os indivíduos filhos
+herdam características dos seus genitores. Devido à selecção natural, onde as
+melhores características são mantidas, as gerações mais recentes se tornam 
+melhores ou iguais à anteriores.
+
+O ponto crucial na modelagem de um GA é definir como um indivíduo é avaliado,
+ou seja, mensurar a qualidade das suas características. Essa medida é chamada 
+de {\it fitness}. 
+
+A execução do algorítmo começa com a inicialização de uma população finita, 
+onde cada indivíduo tem suas características iniciadas, com valores 
+pseudo-aleatórios - em geral - e válidos (dentro do contexto do problema). 
+Feito isso, todos são avaliados pela função {\it fitness}. Nesse ponto, são 
+selecionados indivíduos para o cruzamento ({\it crossover}), onde também pode 
+ocorrer mutação. Alguns elementos da população são eliminados para dar lugar 
+aos novos gerados. Novamente, todos são avaliados pela função {\it fitness}. 
+Enquanto for requerido, a população é evoluída. Por fim, a última geração terá
+melhores indivíduos que as anteriores.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      Codificação      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Codificação}
+Para a implementação, um cromossomo é representado por uma {\it string} - esturutra
+homogênea unidimensional -, onde cada posição é um gene. Esta pode ser binária, 
+inteira ou real. A escolha da codificação vai depender dos tipos dos dados
+disponíveis.
+
+Qualquer informação pode ser representada facilmente de maneira binária pelo
+computador, o que torna a representação por strings binárias tão atrativa.
+Porém {\it strings} de inteiros e reais são amplamente utilizadas \cite{survey_of_evol_algorithms}.
+
+\section{Operadores genéticos}
+Os operadores genéticos são os mecanismos necessários para promover a evolução
+da população representada. 
+
+\subsection{Seleção}
+Para uma nova geração, devem ser selecionados os indivíduos que para a operação
+de crossover. É possível usar uma abordagem psuedo-aleatória, como também, uma
+mais elitista, realizando o cruzamento entre os elementos que possuem melhor
+fitness, e consequentemente, uma boa configuração de genes - chamado de esquema.
+
+\subsection{Crossover}
+Todas as gerações na execução de um GA provém da parental por meio de cruzamentos
+entre esses primeiros indivíduos. Utilizando {\it strings}, um filho é gerado pela
+junção de um trecho do cromossomo pai e um trecho do cromossomo mãe ({\it one 
+point crossover}). Naturalmente, esse processo pode ser feito utilizando mais 
+fragmentos de cada genitor. Dessa maneira, o mecanismo de herança também é 
+implementado.
+
+\subsection{Mutação}
+Um {\it crossover} gera um cromossomo filho com características que estavam
+presentes nos cromossomos pais. Logo, por mais que uma sequência inédita seja 
+gerada, os genes em si, não serão. Ou seja, dada uma população já inicializada,
+somente por {\it crossover} - que gere filhos formados por fragmentos dos pais -, 
+é impossível o surgimento de um gene que não esteja presente na população.
+De maneira que haverá pouca diversidade, levando a uma rápida homogeneidade.
+
+A mutação consiste em pequenas perturbações nos genes de um cromossomo. Uma 
+inversão de {\it bits} em uma string binária, um acréscimo ou decréscimo em 
+um inteiro ou uma perturbação gaussiana numa representação real. Alterações
+bruscas causariam uma descaracterização total do cromossomo, podendo haver 
+perda de informação. 
+
+Essas alterações geram novos cromossomos ligeiramente diferentes, que podem
+aumentar a precisão dos resultados e testam a robustez das respostas 
+encontradas. Particularmente, a representação real possui maior precisão 
+que as outras devido ao ponto flutuante.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%      A função Fitness      %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A função Fitness}
+O que mais diferencia um algorítmo genético de outro é a maneira que um indivíduo
+é classificado, já que, depende do contexto da aplicação.
+A função {\it fitness} deve mostrar o quão bom é um indivíduo dentro do problema.
+
+\section{Evolução}
+A partir dos cruzamentos da geração parental, as seguintes são geradas. Nesse processo
+ocorre {\it crossover} e mutação para a produção dos cromossomos filhos. Então, algumas abordagens 
+para a criação da nova geração podem ser aplicadas.
+
+Pode ocorrer uma substituição geracional, onde a parental é completamente substituída. 
+
+Numa perspectiva elitista, um certo número de melhores indivíduos da geração passada
+é mantido, para que boas sequências de genes não sejam perdidas.
+
+É possível também a não permissão de indivíduos repetidos, para a permanência da diversidade na população.
+
+%     Mineração de Dados       %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mineração de Dados}
+Mineração de dados é uma área que objetiva encontrar padrões, correlações ou 
+anomalias em grandes bancos de dados \cite{learning_from_data}. É uma parte do
+processo de descoberta de conhecimento em banco de dados para os dados de
+baixo nível em informação de alto nível. A mineração tem por objetivo extrair 
+padrões e modelos dos dados \cite{escolha_mineracao}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     CRISP - DM     %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{CRISP-DM}
+CRISP-DM (do inglês, CRoss Industry Standard Process for Data Mining) é um modelo
+de processo que identifica as diferentes fases na implantação de um projeto de
+mineração de dados. Essa metodologia independe do domínio de aplicação, podendo
+ser aplicada nesse contexto específico pela generalidade proposta pelo modelo
+\cite{estudos_crisp}. É uma metodologia bastante difundida, e define as 
+atividades do processo de maneira hierárquica \cite{crisp}.
+
+A fase inicial - entendimento de negócio - trata do levantando dos objetivos do 
+projeto a partir da definição do problema abordado numa perspectiva de negócio. 
+Em seguida, na fase de entendimento de dados, os dados são descritos,
+identificando pontos importantes para análise. Na fase de preparação, os dados 
+são tratados, eliminando atributos indesejados, e selecionando os que serão
+analisados. Na modelagem, modelos são aplicados para calibração de parâmetros.
+Então, são avaliados e o modelo final é construído, desde que esteja dentro dos
+objetivos de negócio. Por último, a informação adquirida é organizada para
+apresentação para o portador final pronto para ser utilizado.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%   Clusterização    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Clusterização}
+Clusterização ({\it Clustering}) é uma importante técnica de classificação
+não-supervisionada, onde, os dados similares pertencem a um mesmo grupo 
+({\it cluster}) \cite{ga_based_clustering_technique}, logo dados com 
+características diferentes devem pertencer a {\it clusters} diferentes.
+
+As técnicas de {\it clustering} podem ser classificadas quanto à variação
+do número de {\it clusters}. Clusterização com número de clusters não-variável 
+exige que seja esse valor {\it k} seja dado, para que os dados sejam agrupados 
+em {\it k} grupos. Já os não-variáveis, determinam o melhor número de 
+{\it clusters} com base nas similaridades dos próprios dados \cite{crisp}.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%     K-means    %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{K-means}
+Das técnicas de {\it clustering}, o algorítmo {\it K-means} (K-médias) é um dos
+mais conhecidos e usados \cite{ga_based_clustering_technique}. Dado um número
+{\it k} de {\it clusters}, são eleitos {\it k} centróides, que são pontos que
+representam o centro de um {\it cluster} - em geral, escolhidos de maneira 
+pseudo-aleatória do banco de dados. Então, para cada ponto da amostra é calculada
+a distância euclidiana para os três centróides, de modo que o ponto é atribuído 
+ao centróide mais próximo. 
+
+A distância euclidiana entre dois pontos {\it x} e {\it y} de R\textsuperscript{n} 
+é dada por:
+
+\begin{equation} d = \sqrt{(x_1-y_1)^2 + (x_2-y_2)^2 + (x_3-y_3)^2 + ... + (x_n-y_n)^2} \end{equation}
+
+Depois, os centróides são reposicionados, calculando a distância média para cada 
+ponto do seu {\it cluster}. Ao término dessa etapa, novamente é verificada a 
+distância euclidiana, atribuindo os pontos aos {\it clusters} dos centróides mais
+próximos e, em seguida, reposicionando os centróides com base no novo grupo. 
+Esse processo é repetido até que os centróides não se movam mais, ou até que essa
+movimentação seja pequena o suficiente.
+
+Para se ter maior confiabilidade do resultado, não basta utilizar o algorítmo uma 
+única vez, seria necessário utilizar essa técnica para todos os arranjos de {\it k} 
+centróides. Tendo como resultado, os centróides resultantes de cada arranjo, para 
+se ter o valor médio e métricas para confiabilidade.
+
+% Rigor quanto aos alogrítmos   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Rigor quanto aos alogrítmos}
+Para aumentar a confiabilidade dos resultados na implementação dos algorítmos, 
+técnicas de validação cruzada (cross validation) foram utilizadas para a
+experimentação do modelo. Também foi criado o gerador de números pseudo-aleatórios
+{\it Linear Feedback Shift Register} (LFSR) para maior confiabilidade nos 
+operadores e na inicialização dos cromossomos.
+
+\subsection{Linear Feedback Shift Register}
+O algorítmo LFSR é um registrador de {\it shift } de {\it bits} utilizado em 
+aplicações para geração de números pseudo-aleatórios. Dada uma sequência inicial 
+de {\it bits}, é realizada a operação lógica XOR - chamada ''ou exclusivo'' - entre
+algumas posições escolhidas da sequência. Depois, cada {\it bit} avança uma posição
+para dar lugar ao novo gerado pelas operações.
+
+\subsection{Cross-Validadtion}
+{\it cross-validation} é uma técnica estatística que permite mensurar a qualidade de um modelo a partir de uma base dados, permite avaliar a robustez do modelo para dados que não se encontram na base \cite{cross_val}. 
+
+Para aferir a capacidade de generalização do modelo, a base de dados é divida em dados de treino e dados de teste. Esses grupos devem ser representativos da população e mutuamente exclusivos. Isso garante que a modelagem seja exclusiva daquele conjunto de dados, evitando redundâncias ({\it overfitting}).
+
+Porém, uma simples divisão não garante bons subconjuntos de dados, já que pode depender das particularidades de cada divisão. Existem meios mais efetivos de divisão que minimizam esse problema. O método {\it K-fold} separa a base de dados em {\it k} subconjuntos, dos quais {\it k - 1} são usados para treino e 1 para teste. Cada subconjunto de teste é avaliado pelo modelo, e aplicado no subconjunto de teste. O resutaldo final pode ser obtido como a média entre as avaliações. 
+
+Um caso particular do {\it K-fold}, conhecido como {\it Leave one out}, utiliza {\it k} com valor igual ao total de dados, ou seja, as {\it k - 1} parametrizações são testadas em um único ponto.
